@@ -1,23 +1,51 @@
-# AI-Powered Personalized Cover Letter Generator
+# AI Cover Letter Generator
 
-An end-to-end AI-based system that generates personalized, role-specific cover letters using resume and job description inputs. The application integrates multi-format document processing, OCR-based extraction, and locally deployed Large Language Models (LLMs) for automated content generation.
+## Overview
+
+This project generates personalized cover letters using AI by analyzing a user's resume and job description.
+
+The system uses Large Language Models (LLMs) to tailor the cover letter according to the role requirements, helping job seekers quickly create professional applications.
 
 ## Features
 
-Supports TXT, PDF, and image-based documents  
-Automatic file type detection  
-Direct text extraction and OCR fallback  
-Prompt-based personalized cover letter generation  
-Local LLM execution using Ollama  
-Streamlit-based interactive interface  
+* Upload resume for analysis
+* Input job description
+* AI-generated personalized cover letters
+* Modular architecture for prompt routing and LLM interaction
+* Easy to extend with other LLM APIs
 
-## User Input
+## Project Structure
 
-File Detection → Text Extraction (Direct / OCR) → Text Processing → Prompt Engineering → Local LLM Execution → Generated Output
+app.py — Main application entry point
+file_reader.py — Handles resume/document parsing
+llm_handler.py — Manages LLM interactions
+prompt_router.py — Builds prompts for cover letter generation
 
-## Technologies Used
+## Installation
 
-Frontend – Streamlit  
-Backend – Python  
-LLM Execution – Ollama  
-Document Processing – PaddleOCR
+1. Clone the repository
+
+git clone https://github.com/Naveena-14/Cover-Letter-Generator.git
+
+2. Navigate to the project folder
+
+cd Cover-Letter-Generator
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+4. Run the application
+
+python app.py
+
+## Future Improvements
+
+* Add web interface
+* Support multiple LLM providers
+* Improve prompt engineering
+* Export generated cover letters as PDF
+
+## License
+
+This project is licensed under the MIT License.
